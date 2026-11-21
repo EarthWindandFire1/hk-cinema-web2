@@ -1,10 +1,10 @@
-# Beyond the Golden Age / web2
+# Fewer Films. What Changed? / web2
 
 基于 `D:\Python\ymy\web` 原Demo改造的五章演讲型网站。本地静态项目，无需npm、Python依赖或构建步骤。
 
 ## 在线访问与更新
 
-- 网站：[Beyond the Golden Age](https://earthwindandfire1.github.io/hk-cinema-web2/)
+- 网站：[Fewer Films. What Changed?](https://earthwindandfire1.github.io/hk-cinema-web2/)
 - 公开仓库：[GitHub](https://github.com/EarthWindandFire1/hk-cinema-web2)
 - GitHub Pages发布来源：`main` 分支的根目录 `/`；`.nojekyll`保留静态文件。
 - 修改后运行 `node verify.cjs`，再提交并推送到`main`；Pages将自动重新部署。
@@ -15,6 +15,12 @@
 直接双击 `index.html` 即可使用。图表库、数据、影院照片和电影海报均保存在项目内；Google Fonts不可用时自动使用系统字体。网站不依赖外部数据接口。
 
 也可在此目录运行 `python -m http.server 8022 --bind 127.0.0.1`，浏览器访问 `http://127.0.0.1:8022`。
+
+## 演讲主线
+
+影院海报仅用于简短引入，主要叙事为：**产量与评分的反差 → 类型结构变化 → 演员合作网络变化 → 评分、关注度和票房的区别 → 综合结论**。
+
+五页依次为：The question、Finding 1 · Genres、Finding 2 · Collaboration、Finding 3 · Success、The whole story。十张图全部保留；剧情词汇、指数走势和覆盖率是补充证据。第五页先总结三个发现，再展示辅助图和电影表。八分钟中文口述稿与网页逐图对应，讲稿提示同步更新。
 
 ## 演示
 

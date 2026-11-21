@@ -1,23 +1,23 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Beyond the Golden Age · Hong Kong Cinema</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fewer Films. What Changed? · Hong Kong Cinema</title><link rel="stylesheet" href="style.css"></head>
 <body>
 <aside class="sidebar">
   <a class="brand" href="#opening"><span class="brand-symbol">港</span><span>THE HONG KONG<br>CINEMA PROJECT</span></a>
   <div class="rail-caption">A STORY IN FIVE CHAPTERS</div>
   <nav aria-label="Chapters">
-    <button data-page="opening"><span>01</span><div>The world is watching<small>A different kind of opening</small></div></button>
-    <button data-page="changing"><span>02</span><div>A changing screen<small>Output, reception & genre</small></div></button>
-    <button data-page="people"><span>03</span><div>The people behind it<small>Collaboration & communities</small></div></button>
-    <button data-page="success"><span>04</span><div>What counts as success?<small>Attention, revenue & awards</small></div></button>
-    <button data-page="after"><span>05</span><div>Beyond the golden age<small>The evidence & its limits</small></div></button>
+    <button data-page="opening"><span>01</span><div>The question<small>Fewer films. What changed?</small></div></button>
+    <button data-page="changing"><span>02</span><div>Finding 1 · Genres<small>The output–rating puzzle</small></div></button>
+    <button data-page="people"><span>03</span><div>Finding 2 · Collaboration<small>A more fragmented network</small></div></button>
+    <button data-page="success"><span>04</span><div>Finding 3 · Success<small>Ratings, attention & box office</small></div></button>
+    <button data-page="after"><span>05</span><div>The whole story<small>Three findings, one conclusion</small></div></button>
   </nav>
   <div class="rail-bottom"><button id="present">Enter fullscreen</button><a href="presentation.md">Presentation script · 中文</a><span>COMP7507 · GROUP 31<br>1950—2026 · DATA STORY</span></div>
 </aside>
 <main>
-  <header class="topbar"><span>HONG KONG, ON THE WORLD'S SCREEN</span><div><span id="chapter-count">01 / 05</span><button id="notes-toggle" aria-pressed="false">Speaker cues</button></div></header>
+  <header class="topbar"><span>HONG KONG CINEMA · 1950—2026</span><div><span id="chapter-count">01 / 05</span><button id="notes-toggle" aria-pressed="false">Speaker cues</button></div></header>
   <section class="page opening" id="opening" aria-labelledby="opening-title">
-    <div class="hero-copy"><div class="eyebrow">FROM KUNG FU TO HOLLYWOOD. WHAT COMES NEXT?</div><h1 id="opening-title">Beyond the<br><em>golden age.</em></h1><p>Hong Kong cinema travelled the world.<br>Did its industry follow the same story?</p><button class="primary" data-go="changing">Explore the evidence</button><div class="hero-meta">A visual story of films, people and recognition.</div></div>
+    <div class="hero-copy"><div class="eyebrow">WHEN FILM PRODUCTION FALLS, WHAT CHANGES?</div><h1 id="opening-title">Fewer films.<br><em>What changed?</em></h1><p>A study of Hong Kong cinema, 1950–2026.<br>Genres. Collaboration. Audience response.</p><button class="primary" data-go="changing">Explore the evidence</button><div class="hero-meta">Our starting point: output falls, but ratings recover.</div></div>
     <div class="cinema-collage">
       <figure class="venue venue-shanghai"><img src="assets/shanghai.jpg" alt="Grand Cinema in Shanghai"><figcaption>SHANGHAI · GRAND CINEMA</figcaption></figure>
       <figure class="venue venue-la"><img src="assets/hollywood.jpg" alt="Chinese Theatre in Hollywood, Los Angeles"><figcaption>LOS ANGELES · CHINESE THEATRE</figcaption></figure>
@@ -28,8 +28,8 @@
         <figure><img src="assets/ufo.jpg" alt="Ciao UFO film poster"><figcaption><b>2026 AWARD</b>Ciao UFO<small>HKFA · Best Film, 44th edition</small></figcaption></figure>
       </div>
     </div>
-    <div class="opening-question"><span>THE QUESTION</span><h2>Less production.<br>Less cinema?</h2><p>From international stardom to contemporary recognition, visibility is only one part of the story. We look at what changed inside the industry.</p></div>
-    <div class="cue">开场：从《龙争虎斗》、1998年《Rush Hour》与最新获奖片《再见UFO》切入。全球可见度，是否等于产业健康？</div>
+    <div class="opening-question"><span>THE QUESTION</span><h2>Output falls.<br>Ratings recover.</h2><p>The 1990s contain 723 films; the incomplete 2020s contain 195 so far. Yet mean ratings recover from 5.66 in the 2010s to 6.01 in the 2020s. What is different about the films that remain?</p></div>
+    <div class="cue">开场简短提到李小龙、成龙与近年的获奖电影，马上回到核心问题：当电影产量减少时，这个行业究竟发生了什么变化？接下来讲产量与评分的反差，再展开三个发现。</div>
     <p class="fineprint">Venues form a visual collage, not a claim that these films premiered there. Rush Hour is a US production used to illustrate star crossover. <a href="https://www.hkfaa.com/winnerlist.html" target="_blank" rel="noreferrer">2026 award source: HKFAA</a> · <a href="sources.md">Image credits & sources</a></p>
   </section>
   <div class="explore-controls" id="controls" hidden>
@@ -38,40 +38,48 @@
     <p>Filters update production, genre, reception and the film table. Other evidence remains fixed; the network is a historical overview.</p>
   </div>
   <section class="page" id="changing" hidden>
-    <div class="page-heading"><div class="eyebrow">THE FIRST CONTRADICTION</div><h1>Fewer films.<br><em>A different mix.</em></h1><p>Production contracts. Audience ratings recover. The films left in the frame are changing.</p></div>
+    <div class="page-heading"><div class="eyebrow">THE STARTING PUZZLE → FINDING 1</div><h1>A changing<br><em>genre mix.</em></h1><p>Output and ratings take different paths. We first ask whether the kinds of films being made have changed.</p></div>
     <div class="stats" id="stats"></div>
     <div class="chart-grid">
-      <article class="chart-card"><div class="chart-heading"><h2>Output is not reception</h2><span class="badge">FILTERED</span></div><div id="g-series" class="plot"></div><p>Separate panels keep production counts and mean scores on their own scales. The 2020s are incomplete.</p><div class="cue">产量柱图与评分线分别读：723与195是已收录数量；评分从5.66回升到6.01，不能直接说产业复苏。</div></article>
-      <article class="chart-card"><div class="chart-heading"><h2>The mix behind the numbers</h2><span class="badge">FILTERED</span></div><div id="g-genre" class="plot"></div><p>Share of genre tags, not share of films. Films may carry several tags; the eight displayed genres need not sum to 100%.</p><div class="cue">看类型占比而非只看总量。动作类型份额降低，剧情类型更突出；不说“动作片消失了”。</div></article>
-      <article class="chart-card wide"><div class="chart-heading"><h2>The change appears in the stories, too</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-5" class="plot"></div><p>Plot vocabulary per 1,000 words · 158 usable Wikipedia plot sections, sampled from highly voted films.</p><div class="cue">武术词汇在1970至1980年代下降，犯罪词汇上升。它支持内容转型，但样本偏向资料完整的热门电影。</div></article>
+      <article class="chart-card"><div class="chart-heading"><h2>The starting puzzle: output and ratings</h2><span class="badge">FILTERED</span></div><div id="g-series" class="plot"></div><p>Separate panels keep production counts and mean scores on their own scales. The 2020s are incomplete.</p><div class="cue">产量柱图与评分线分别读：723与195是已收录数量；评分从5.66回升到6.01，不能直接说产业复苏。</div></article>
+      <article class="chart-card"><div class="chart-heading"><h2>Finding 1: the genre mix changed</h2><span class="badge">FILTERED</span></div><div id="g-genre" class="plot"></div><p>Share of genre tags, not share of films. Films may carry several tags; the eight displayed genres need not sum to 100%.</p><div class="cue">第一个发现：动作类型标签占比从约20%降至约14%，剧情片仍占重要地位。变化不只是电影数量，作品类型构成也在改变。</div></article>
+      <article class="chart-card wide supporting"><div class="chart-heading"><h2>Supporting view: the language of the plots</h2><span class="badge fixed">SUPPORTING VIEW</span></div><div id="ev-5" class="plot"></div><p>Plot vocabulary per 1,000 words · 158 usable Wikipedia plot sections, sampled from highly voted films.</p><div class="cue">武术词汇在1970至1980年代下降，犯罪词汇上升。它支持内容转型，但样本偏向资料完整的热门电影。</div></article>
     </div>
   </section>
   <section class="page" id="people" hidden>
-    <div class="page-heading"><div class="eyebrow">BEHIND THE SCREEN</div><h1>One industry.<br><em>Many circles.</em></h1><p>The stars travelled. How did the network that connected them change?</p></div>
+    <div class="page-heading"><div class="eyebrow">FINDING 2 · ACTOR COLLABORATION</div><h1>A smaller network.<br><em>More separate circles.</em></h1><p>The collaboration network becomes smaller and more fragmented across decades.</p></div>
     <div class="pullquote"><strong>7,922</strong><span>performers in the historical network</span><strong>900</strong><span>shown in the original Demo overview</span></div>
     <div class="chart-grid">
       <article class="chart-card"><div class="chart-heading"><h2>A network of familiar faces</h2><span class="badge fixed">FIXED OVERVIEW</span></div><div id="g-network" class="plot"></div><p>Original Demo projection · node size indicates distinct co-stars; colour indicates community. Hover to inspect a performer. This node overview does not display edges.</p><div class="cue">节点是演员，大小表示合作广度，颜色表示社区。这是汇总投影，不能单凭它判断何时发生变化。</div></article>
       <article class="chart-card"><div class="chart-heading"><h2>From connection to separation</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-4" class="plot"></div><p>Performer counts and network modularity by decade. Greater modularity indicates clearer separation between communities.</p><div class="cue">1990年代模块度0.35，2020年代约0.54。合作圈分隔更明显；共同出演不是雇佣关系，也不直接证明精英垄断。</div></article>
     </div>
-    <div class="takeaway"><span>WHAT CHANGED</span><h2>A smaller network can also be a more divided one.</h2><p>The report's largest connected component falls from 97.8% of performers in the 1990s to 84% in the 2020s. This describes casting patterns, not ownership or employment.</p></div>
+    <div class="takeaway"><span>WHAT CHANGED</span><h2>From 97.8% connected to 84%.</h2><p>The report's largest connected component falls from 97.8% of performers in the 1990s to 84% in the 2020s. This describes casting patterns, not ownership or employment.</p></div>
   </section>
   <section class="page" id="success" hidden>
-    <div class="page-heading"><div class="eyebrow">THREE MEANINGS OF SUCCESS</div><h1>Well rated.<br><em>Well seen. Well sold?</em></h1><p>Reception, IMDb attention and box-office performance answer different questions.</p></div>
+    <div class="page-heading"><div class="eyebrow">FINDING 3 · RATINGS, ATTENTION & BOX OFFICE</div><h1>Three measures.<br><em>Different outcomes.</em></h1><p>High ratings do not always mean high attention or strong box-office performance.</p></div>
     <div class="chart-grid">
-      <article class="chart-card"><div class="chart-heading"><h2>Good films can go unnoticed</h2><span class="badge">FILTERED</span></div><div id="g-quad" class="plot"></div><p>IMDb votes are a proxy for online attention, not cinema admissions. Dashed lines mark the current slice's medians.</p><div class="cue">左上区域是高评分、低投票数。投票量不等于观影人数，不能称作“没人看”。</div></article>
-      <article class="chart-card"><div class="chart-heading"><h2>Ratings only weakly track revenue</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-2" class="plot"></div><p>637 matched charting films · 2001–2026 · r = 0.211 in the report. Percentile measures rank within a year's chart, not revenue in dollars.</p><div class="cue">评分与票房百分位弱相关，r约0.21。只能说明高分不保证高票房，不能说质量完全不影响收入。</div></article>
-      <article class="chart-card wide"><div class="chart-heading"><h2>Recognition meets audience reception</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-3" class="plot"></div><p>Historical Best Film winner dataset ends in 2025 · the median winner is around the 94th rating percentile of its release year. The opening's 2026 winner is contextual, not added to this chart.</p><div class="cue">最佳电影得主通常也得到观众较高评价。奖项和评分相互呼应；没有证明奖项导致票房增长。</div></article>
+      <article class="chart-card"><div class="chart-heading"><h2>Ratings and attention do not always align</h2><span class="badge">FILTERED</span></div><div id="g-quad" class="plot"></div><p>IMDb votes are a proxy for online attention, not cinema admissions. Dashed lines mark the current slice's medians.</p><div class="cue">左上区域是高评分、低投票数。投票量不等于观影人数，不能称作“没人看”。</div></article>
+      <article class="chart-card"><div class="chart-heading"><h2>Ratings and box office: r ≈ 0.21</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-2" class="plot"></div><p>637 matched charting films · 2001–2026 · r = 0.211 in the report. Percentile measures rank within a year's chart, not revenue in dollars.</p><div class="cue">评分与票房百分位弱相关，r约0.21。只能说明高分不保证高票房，不能说质量完全不影响收入。</div></article>
+      <article class="chart-card wide"><div class="chart-heading"><h2>Awards add another perspective</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-3" class="plot"></div><p>Historical Best Film winners end in 2025 · median rating percentile ≈ 94. The report also finds a median gross percentile of 91 for charting winners, versus 50 for other charting films. These are associations, not award effects.</p><div class="cue">最佳电影得主通常同时具有较高评分和较好票房表现。图中展示同年评分百分位，票房比较来自报告。这里只观察到关联，不能判断奖项造成票房增长。</div></article>
     </div>
   </section>
   <section class="page" id="after" hidden>
-    <div class="page-heading"><div class="eyebrow">READING THE WHOLE PICTURE</div><h1>Beyond decline.<br><em>A structural change.</em></h1><p>The global icons remain visible. The system that makes the films has changed.</p></div>
+    <div class="page-heading"><div class="eyebrow">THE CONCLUSION · READ THE THREE FINDINGS TOGETHER</div><h1>Fewer films.<br><em>A fuller story.</em></h1><p>Hong Kong cinema’s changing genres, collaboration structure and market reception deserve to be read together.</p></div>
+
+    <div class="narrative-summary" aria-label="Three findings">
+      <div><span>FINDING 1</span><h2>Genres changed.</h2><p>Action's share fell; Drama remained important.</p></div>
+      <div><span>FINDING 2</span><h2>Collaboration changed.</h2><p>The actor network became more fragmented.</p></div>
+      <div><span>FINDING 3</span><h2>Success has several measures.</h2><p>Ratings, attention and box office do not always align.</p></div>
+    </div>
+    <div class="takeaway final-takeaway"><span>THE TAKEAWAY</span><h2>Declining output does not<br>tell the whole story.</h2><p>A recovery in ratings does not establish industrial recovery. Falling production alone does not explain everything that changed.</p></div>
+    <div class="supporting-intro"><span>SUPPORTING EVIDENCE & LIVE EXPLORATION</span><p>Use the charts and film table below to inspect the broader pattern and the data behind it.</p></div>
     <div class="chart-grid">
-      <article class="chart-card"><div class="chart-heading"><h2>Different measures, different histories</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-1" class="plot"></div><p>Original Demo series indexed to the 1990s = 100. IMDb vote totals are cumulative attention, not audience counts at release.</p><div class="cue">统一基准后，产量、总投票与单片投票走势仍不同。不要把IMDb累计关注解释为当年观众迁移。</div></article>
-      <article class="chart-card"><div class="chart-heading"><h2>Before the conclusion, check the blind spots</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-0" class="plot"></div><p>Field coverage by decade. Missing information and small vote counts limit what the other charts can establish.</p><div class="cue">覆盖率热力图：不同年代资料完整程度不同。IMDb是自选样本，2020年代未完成，票房只从2001年开始。</div></article>
+      <article class="chart-card"><div class="chart-heading"><h2>Supporting view: different trajectories</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-1" class="plot"></div><p>Original Demo series indexed to the 1990s = 100. IMDb vote totals are cumulative attention, not audience counts at release.</p><div class="cue">统一基准后，产量、总投票与单片投票走势仍不同。不要把IMDb累计关注解释为当年观众迁移。</div></article>
+      <article class="chart-card"><div class="chart-heading"><h2>Supporting view: data coverage</h2><span class="badge fixed">FIXED EVIDENCE</span></div><div id="ev-0" class="plot"></div><p>Field coverage by decade. Missing information and small vote counts limit what the other charts can establish.</p><div class="cue">覆盖率热力图：不同年代资料完整程度不同。IMDb是自选样本，2020年代未完成，票房只从2001年开始。</div></article>
     </div>
     <details class="film-details"><summary>Explore the films behind the story <span id="table-count"></span></summary><div class="table-scroll"><table id="films-table"><thead><tr><th data-key="0" tabindex="0">Film</th><th data-key="1" tabindex="0">Year</th><th data-key="2" tabindex="0">Genres</th><th data-key="3" tabindex="0">Rating</th><th data-key="4" tabindex="0">IMDb votes</th></tr></thead><tbody id="films-body"></tbody></table></div><div class="pager"><button id="prev">Previous</button><span id="table-page"></span><button id="next">Next</button></div><div class="cue">可选演示：按投票数排序并查看具体片名。表格是追溯记录的入口，不另加结论。</div></details>
-    <div class="takeaway final-takeaway"><span>THE TAKEAWAY</span><h2>Global visibility is not<br>the same as industrial health.</h2><p>Read production, content, collaboration and recognition together. Hong Kong cinema's story is more than a count of films.</p></div>
-    <details class="method"><summary>Data provenance & reading notes</summary><p>Built from the local web Demo, retaining its four main charts, six evidence charts and sortable film table. Source data: Wikidata country-of-origin records, IMDb, Hong Kong Film Awards and Box Office Mojo.</p><p id="data-audit"></p><p>Genre shares use all tags as the denominator, not releases. Evidence panels and the network overview are fixed. Co-appearance does not establish production control; association does not establish causation. No audience migration to television is established here.</p><p><a href="sources.md">Sources & image credits</a> · <a href="presentation.md">8-minute presentation script</a></p></details>
+
+    <details class="method"><summary>Data provenance & reading notes</summary><p>Built from the local web Demo, retaining its four main charts, six evidence charts and sortable film table. Source data: Wikidata country-of-origin records, IMDb, Hong Kong Film Awards and Box Office Mojo.</p><p id="data-audit"></p><p>Genre shares use all tags as the denominator, not releases. Evidence panels and the network overview are fixed. Co-appearance does not establish production control; association does not establish causation. The presentation follows the output–rating puzzle and three findings: genre change, collaboration change and the distinction between ratings, attention and box office.</p><p><a href="sources.md">Sources & image credits</a> · <a href="presentation.md">8-minute presentation script</a></p></details>
   </section>
   <footer class="page-footer"><span>COMP7507 · GROUP 31</span><div><button id="chapter-prev">Previous chapter</button><button id="chapter-next">Next chapter</button></div></footer>
 </main>
