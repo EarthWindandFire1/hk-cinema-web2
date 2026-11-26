@@ -16,3 +16,41 @@
 .supporting-intro p{margin-top:7px}
 .supporting{border-top:3px solid #ecd5d5}
 @media(max-width:900px){.narrative-summary{grid-template-columns:1fr;gap:12px}}
+
+.explore-controls {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-top: 0;
+  padding: 10px 0;
+  gap: 4px;
+  background: var(--paper);
+}
+.explore-controls .filter-fields {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+.filter-fields > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 700px) {
+  .explore-controls .filter-fields {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 5px 4px;
+    scrollbar-width: thin;
+  }
+  .filter-fields > div {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .explore-controls {
+    padding: 5px 0;
+  }
+  .explore-controls p {
+    line-height: 1.3;
+  }
+}

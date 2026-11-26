@@ -73,7 +73,7 @@
     if(!chapters.includes(id))id='opening';current=id;
     document.querySelectorAll('.page').forEach(el=>el.hidden=el.id!==id);
     document.querySelectorAll('nav button').forEach(b=>{const on=b.dataset.page===id;b.classList.toggle('active',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
-    $('controls').hidden=id==='opening';$('chapter-count').textContent=`0${chapters.indexOf(id)+1} / 05`;
+    $('chapter-count').textContent=`0${chapters.indexOf(id)+1} / 05`;
     $('chapter-prev').disabled=id==='opening';$('chapter-next').disabled=id==='after';
     if(scroll)window.scrollTo({top:0,behavior:'instant'});drawCurrent();
   }
