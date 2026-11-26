@@ -3,24 +3,24 @@
   const $ = id => document.getElementById(id);
   const chapters = ['opening','changing','people','success','after'];
   const st = {lo:1950,hi:2020,genres:[],minVotes:0};
-  const L = HKLogic, C = ['#285449','#b1633f','#849e88','#977a9e','#b59c65','#627b91','#ac6d79','#698e8c'];
+  const L = HKLogic, C = ['#b5222c','#d36b45','#ccaa67','#80516c','#98483d','#6f677b','#b87b83','#79666a'];
   const fmt = n => n == null ? '—' : n.toLocaleString('en-US');
   const config = {displayModeBar:false,responsive:true};
   const plots = new Set();
   let current = '', tablePage = 0, sortKey = 4, sortDir = -1;
   function layout(extra = {}) {
     return Object.assign({height:355,margin:{l:52,r:22,t:25,b:70},paper_bgcolor:'#fff',plot_bgcolor:'#fff',colorway:C,
-      font:{family:'DM Sans, Segoe UI, Arial',size:12,color:'#52615a'},
-      xaxis:{gridcolor:'#edf0ed',zeroline:false,automargin:true},yaxis:{gridcolor:'#edf0ed',zeroline:false,automargin:true},
+      font:{family:'DM Sans, Segoe UI, Arial',size:12,color:'#706165'},
+      xaxis:{gridcolor:'#f0e8e8',zeroline:false,automargin:true},yaxis:{gridcolor:'#f0e8e8',zeroline:false,automargin:true},
       legend:{orientation:'h',x:0,y:-.23,font:{size:11}},hoverlabel:{font:{size:13}}},extra);
   }
   function plot(id,data,l) { plots.add(id); return Plotly.react(id,data,l,config); }
   function drawSeries() {
     const d=L.byDecade(HK.films,st),x=d.decades.map(v=>v+'s');
     plot('g-series',[
-      {type:'bar',x,y:d.films,name:'Films',marker:{color:'#7c9a88'},hovertemplate:'%{x}: %{y} films<extra></extra>'},
-      {type:'scatter',mode:'lines+markers',x,y:d.rating,yaxis:'y2',name:'Mean rating',line:{color:'#b1633f',width:3},hovertemplate:'%{x}: %{y:.2f}<extra></extra>'}
-    ],layout({height:380,yaxis:{domain:[.53,1],title:'Films',gridcolor:'#edf0ed',rangemode:'tozero'},yaxis2:{domain:[0,.30],title:'Rating',range:[4.5,8],gridcolor:'#edf0ed'},annotations:[{xref:'paper',yref:'paper',x:0,y:.39,text:'Audience rating · separate scale',showarrow:false,xanchor:'left',font:{size:11,color:'#8e6346'}}],bargap:.35}));
+      {type:'bar',x,y:d.films,name:'Films',marker:{color:'#c4575c'},hovertemplate:'%{x}: %{y} films<extra></extra>'},
+      {type:'scatter',mode:'lines+markers',x,y:d.rating,yaxis:'y2',name:'Mean rating',line:{color:'#d36b45',width:3},hovertemplate:'%{x}: %{y:.2f}<extra></extra>'}
+    ],layout({height:380,yaxis:{domain:[.53,1],title:'Films',gridcolor:'#f0e8e8',rangemode:'tozero'},yaxis2:{domain:[0,.30],title:'Rating',range:[4.5,8],gridcolor:'#f0e8e8'},annotations:[{xref:'paper',yref:'paper',x:0,y:.39,text:'Audience rating · separate scale',showarrow:false,xanchor:'left',font:{size:11,color:'#a05e4b'}}],bargap:.35}));
   }
   function drawGenre() {
     const all=L.subset(HK.films,st),decs=[];for(let d=st.lo;d<=st.hi;d+=10)decs.push(d);
@@ -28,7 +28,7 @@
     const totals=decs.map(d=>all.filter(f=>Math.floor(f[1]/10)*10===d).reduce((a,f)=>a+f[2].split(',').filter(Boolean).length,0));
     const traces=names.map((g,i)=>({type:'scatter',mode:'lines',name:g,x:decs.map(d=>d+'s'),y:decs.map((d,k)=>totals[k]?100*all.filter(f=>Math.floor(f[1]/10)*10===d&&f[2].split(',').includes(g)).length/totals[k]:null),stackgroup:'genres',line:{width:.6,color:C[i]},fillcolor:C[i],hovertemplate:g+': %{y:.1f}%<extra></extra>'}));
     if(decs.length===1)traces.forEach(t=>{t.type='bar';t.marker={color:t.fillcolor};delete t.stackgroup;delete t.fillcolor;delete t.mode;});
-    plot('g-genre',traces,layout({height:380,barmode:'stack',yaxis:{title:'Share of all genre tags (%)',range:[0,100],gridcolor:'#edf0ed'}}));
+    plot('g-genre',traces,layout({height:380,barmode:'stack',yaxis:{title:'Share of all genre tags (%)',range:[0,100],gridcolor:'#f0e8e8'}}));
   }
   function drawNetwork() {
     const n=HK.net;
@@ -36,14 +36,14 @@
   }
   function drawQuad() {
     const q=L.quadrant(HK.films,st);
-    plot('g-quad',[{type:'scatter',mode:'markers',x:q.x,y:q.y,text:q.text,marker:{size:5,color:'#285449',opacity:.4},hovertemplate:'%{text}<br>Rating %{y} · %{x:,} votes<extra></extra>'}],layout({xaxis:{type:'log',title:'IMDb votes · log scale',gridcolor:'#edf0ed'},yaxis:{title:'IMDb rating',gridcolor:'#edf0ed'},showlegend:false,shapes:q.x.length?[{type:'line',xref:'x',yref:'paper',x0:Math.max(10,q.medVotes),x1:Math.max(10,q.medVotes),y0:0,y1:1,line:{color:'#bcae94',dash:'dash'}},{type:'line',xref:'paper',yref:'y',x0:0,x1:1,y0:q.medRating,y1:q.medRating,line:{color:'#bcae94',dash:'dash'}}]:[],annotations:q.x.length?[]:[{text:'No rated films match these filters',xref:'paper',yref:'paper',x:.5,y:.5,showarrow:false}]}));
+    plot('g-quad',[{type:'scatter',mode:'markers',x:q.x,y:q.y,text:q.text,marker:{size:5,color:'#b5222c',opacity:.4},hovertemplate:'%{text}<br>Rating %{y} · %{x:,} votes<extra></extra>'}],layout({xaxis:{type:'log',title:'IMDb votes · log scale',gridcolor:'#f0e8e8'},yaxis:{title:'IMDb rating',gridcolor:'#f0e8e8'},showlegend:false,shapes:q.x.length?[{type:'line',xref:'x',yref:'paper',x0:Math.max(10,q.medVotes),x1:Math.max(10,q.medVotes),y0:0,y1:1,line:{color:'#c9aaa7',dash:'dash'}},{type:'line',xref:'paper',yref:'y',x0:0,x1:1,y0:q.medRating,y1:q.medRating,line:{color:'#c9aaa7',dash:'dash'}}]:[],annotations:q.x.length?[]:[{text:'No rated films match these filters',xref:'paper',yref:'paper',x:.5,y:.5,showarrow:false}]}));
   }
   function drawEvidence(i) {
     const e=HK.evidence[i];
     const data=structuredClone(e.data);
-    data.forEach((t,k)=>{if(t.type==='heatmap'){t.colorscale=[[0,'#f3f6f1'],[1,'#285449']];t.colorbar={thickness:10,tickfont:{size:10}};}else if(t.type==='bar'){t.marker={...t.marker,color:'#7c9a88'};}else {if(t.marker)t.marker={...t.marker,color:C[k%C.length]};t.line={...t.line,color:C[k%C.length]};}});
+    data.forEach((t,k)=>{if(t.type==='heatmap'){t.colorscale=[[0,'#fff4f2'],[1,'#b5222c']];t.colorbar={thickness:10,tickfont:{size:10}};}else if(t.type==='bar'){t.marker={...t.marker,color:'#c4575c'};}else {if(t.marker)t.marker={...t.marker,color:C[k%C.length]};t.line={...t.line,color:C[k%C.length]};}});
     const l=layout({...structuredClone(e.layout),title:undefined,height:i===4?430:350,margin:{l:i===0?110:60,r:i===4?60:30,t:24,b:82},legend:{orientation:'h',x:0,y:-.27,font:{size:11}}});
-    l.paper_bgcolor=l.plot_bgcolor='#fff';l.font={family:'DM Sans, Segoe UI, Arial',size:12,color:'#52615a'};
+    l.paper_bgcolor=l.plot_bgcolor='#fff';l.font={family:'DM Sans, Segoe UI, Arial',size:12,color:'#706165'};
     if(i===1)l.yaxis={...l.yaxis,title:'Index · 1990s = 100'};
     if(i===2){l.xaxis={...l.xaxis,title:'IMDb rating'};l.yaxis={...l.yaxis,title:'Gross percentile in year'};}
     if(i===3){l.xaxis={...l.xaxis,title:'Film release year'};l.yaxis={...l.yaxis,title:'Rating percentile in year'};}
