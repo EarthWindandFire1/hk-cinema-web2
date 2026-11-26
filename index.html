@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fewer Films. What Changed? · Hong Kong Cinema</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fewer Films. What Changed? · Hong Kong Cinema</title><link rel="stylesheet" href="style.css?v=top-filters-2"></head>
 <body>
 <aside class="sidebar">
   <a class="brand" href="#opening"><span class="brand-symbol">港</span><span>THE HONG KONG<br>CINEMA PROJECT</span></a>
@@ -15,12 +15,12 @@
   <div class="rail-bottom"><button id="present">Enter fullscreen</button><a href="presentation.md">Presentation script · 中文</a><span>COMP7507 · GROUP 31<br>1950—2026 · DATA STORY</span></div>
 </aside>
 <main>
-  <header class="topbar"><span>HONG KONG CINEMA · 1950—2026</span><div><span id="chapter-count">01 / 05</span><button id="notes-toggle" aria-pressed="false">Speaker cues</button></div></header>
   <div class="explore-controls" id="controls" role="region" aria-label="Film filters">
-    <div class="filter-fields" tabindex="0" role="group" aria-label="Film filter options"><div><span class="filter-label">EXPLORE THE CORPUS</span><label>From <select id="f-lo" aria-label="First decade"></select></label><label>To <select id="f-hi" aria-label="Last decade"></select></label></div>
+    <div class="filter-fields" tabindex="0" role="group" aria-label="Film filter options"><div><span class="filter-label">FILTERS</span><label>From <select id="f-lo" aria-label="First decade"></select></label><label>To <select id="f-hi" aria-label="Last decade"></select></label></div>
     <div><label>Genre <select id="f-genre" aria-label="Genre"></select></label><label>Min. votes <select id="f-votes" aria-label="Minimum votes"><option value="0">All</option><option value="100">100</option><option value="1000">1,000</option><option value="2000">2,000</option><option value="5000">5,000</option></select></label><button id="reset">Reset</button></div></div>
     <p>Filters update production, genre, reception and the film table. Other evidence remains fixed; the network is a historical overview.</p>
   </div>
+  <header class="topbar"><span>HONG KONG CINEMA · 1950—2026</span><div><span id="chapter-count">01 / 05</span><button id="notes-toggle" aria-pressed="false">Speaker cues</button></div></header>
   <section class="page opening" id="opening" aria-labelledby="opening-title">
     <div class="hero-copy"><div class="eyebrow">WHEN FILM PRODUCTION FALLS, WHAT CHANGES?</div><h1 id="opening-title">Fewer films.<br><em>What changed?</em></h1><p>A study of Hong Kong cinema, 1950–2026.<br>Genres. Collaboration. Audience response.</p><button class="primary" data-go="changing">Explore the evidence</button><div class="hero-meta">Our starting point: output falls, but ratings recover.</div></div>
     <div class="cinema-collage">
@@ -84,5 +84,5 @@
   <footer class="page-footer"><span>COMP7507 · GROUP 31</span><div><button id="chapter-prev">Previous chapter</button><button id="chapter-next">Next chapter</button></div></footer>
 </main>
 <div id="load-error" role="alert" hidden>The chart library could not load. Keep plotly.min.js beside index.html and reload.</div>
-<script src="plotly.min.js"></script><script src="data.js"></script><script src="hk_logic.js"></script><script src="app.js"></script>
+<script src="plotly.min.js"></script><script src="data.js"></script><script src="hk_logic.js"></script><script src="app.js?v=top-filters-2"></script>
 </body></html>
