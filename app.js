@@ -47,7 +47,20 @@
     if(i===1)l.yaxis={...l.yaxis,title:'Index · 1990s = 100'};
     if(i===2){l.xaxis={...l.xaxis,title:'IMDb rating'};l.yaxis={...l.yaxis,title:'Gross percentile in year'};}
     if(i===3){l.xaxis={...l.xaxis,title:'Film release year'};l.yaxis={...l.yaxis,title:'Rating percentile in year'};}
-    if(i===4){l.yaxis={...l.yaxis,title:'Performers'};l.yaxis2={...l.yaxis2,title:'Modularity'};}
+    if (i === 4) {
+      l.yaxis = {...l.yaxis, title:'Performers'};
+      l.yaxis2 = {...l.yaxis2, title:'Modularity'};
+      l.margin.t = 50;
+      l.annotations = [
+        {x:1990, text:'1990s<br><b>97.8%</b>'},
+        {x:2020, text:'2020s<br><b>84%</b>'}
+      ].map(annotation => ({
+        ...annotation,
+        xref:'x', yref:'paper', y:1, yanchor:'bottom', yshift:5,
+        showarrow:false, font:{size:11,color:'#861b25'},
+        bgcolor:'#fbeeed', borderpad:3
+      }));
+    }
     if(i===5)l.yaxis={...l.yaxis,title:'Mentions per 1,000 words'};
     plot('ev-'+i,data,l);
   }
