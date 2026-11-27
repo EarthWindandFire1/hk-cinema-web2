@@ -51,14 +51,16 @@
       l.yaxis = {...l.yaxis, title:'Performers'};
       l.yaxis2 = {...l.yaxis2, title:'Modularity'};
       l.margin.t = 50;
-      l.annotations = [
-        {x:1990, text:'1990s<br><b>97.8%</b>'},
-        {x:2020, text:'2020s<br><b>84%</b>'}
-      ].map(annotation => ({
-        ...annotation,
+      const shares = {1990:'97.8%', 2020:'84%'};
+      const performers = data[0];
+      performers.customdata = performers.x.map(decade => shares[decade] ?? 'Unavailable');
+      performers.hovertemplate = '%{x}s<br>Performers: %{y:,}<br>Largest connected group: %{customdata}<extra></extra>';
+      data[1].hovertemplate = '%{x}s<br>Modularity: %{y:.3f}<extra></extra>';
+      l.annotations = performers.x.map(decade => ({
+        x:decade, text:shares[decade] ? '<b>' + shares[decade] + '</b>' : '—',
         xref:'x', yref:'paper', y:1, yanchor:'bottom', yshift:5,
-        showarrow:false, font:{size:11,color:'#861b25'},
-        bgcolor:'#fbeeed', borderpad:3
+        showarrow:false, font:{size:11,color:shares[decade] ? '#861b25' : '#786c6e'},
+        bgcolor:shares[decade] ? '#fbeeed' : '#fff', borderpad:2
       }));
     }
     if(i===5)l.yaxis={...l.yaxis,title:'Mentions per 1,000 words'};
